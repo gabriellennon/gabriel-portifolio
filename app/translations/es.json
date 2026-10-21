@@ -251,5 +251,10 @@
       "Vue.js",
       "Syncfusion"
     ]
-  ]
+  ],
+  "contactLinks": {
+    "whatsapp": "WhatsApp",
+    "linkedin": "LinkedIn",
+    "github": "GitHub"
+  }
 }
