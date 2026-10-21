@@ -1,0 +1,255 @@
+{
+  "nav": [
+    "About",
+    "Work",
+    "Stack",
+    "Journey",
+    "Contact"
+  ],
+  "talk": "Let’s talk",
+  "skip": "Skip to content",
+  "theme": "Toggle theme",
+  "language": "Language",
+  "menu": "Open navigation",
+  "kicker": "GABRIEL LENNON / SOFTWARE ENGINEER",
+  "hero": [
+    "FULL STACK.",
+    "FRONT-END",
+    "& MOBILE."
+  ],
+  "intro": "I turn complex problems into simple digital experiences. From the first pixel to products used by thousands of people.",
+  "work": "Explore my work",
+  "resume": "Download résumé",
+  "location": "BALNEÁRIO CAMBORIÚ, BRAZIL",
+  "available": "Open to international opportunities",
+  "scroll": "SCROLL TO EXPLORE",
+  "aboutLabel": "THE PERSON BEHIND THE CODE",
+  "aboutTitle": "BUILDING INTERFACES.\nCONNECTING PEOPLE.\nSHIPPING PRODUCTS.",
+  "aboutText": "I’m Gabriel, a full stack developer specializing in front-end and mobile. For over 6 years, I’ve connected engineering, design and product thinking to turn ideas into fast, accessible and reliable applications.",
+  "aboutMore": "From iFood’s delivery ecosystem to Emanu, the startup I co-founded, my work extends from interfaces to architecture, testing, API integration and the details that make an experience feel right.",
+  "years": "YEARS BUILDING PRODUCTS",
+  "downloads": "Downloads at Emanu",
+  "ifood": "Years at iFood",
+  "platforms": "Web & mobile",
+  "focusLabel": "FOCUS",
+  "focus": "Experience, quality and impact.",
+  "projectsLabel": "FROM CODE TO REAL PRODUCTS",
+  "projectsTitle": "SELECTED WORK",
+  "filters": [
+    "All",
+    "Web",
+    "Mobile",
+    "Full stack"
+  ],
+  "illustration": "ILLUSTRATIVE COMPOSITION",
+  "view": "Explore the work",
+  "close": "Close details",
+  "projectContext": "CONTEXT & CONTRIBUTION",
+  "projectNote": "Visual compositions represent the types of product, rather than screenshots of the original applications. This work was delivered as part of my roles at the companies shown.",
+  "projectCopy": [
+    [
+      "From an idea to 150k+ downloads.",
+      "A faith and spiritual growth platform with personalized experiences, subscriptions and AI.",
+      "As co-founder and CTO, I built the web platform and mobile app with React, Next.js, React Native and Node.js. I designed and launched the premium subscription journey and integrated AI features to support users in their spiritual growth."
+    ],
+    [
+      "Complex under the hood. Simple on screen.",
+      "Device grading with condition-assessment rules and real-time pricing.",
+      "I developed the Next.js Grading system for Doji’s trade-in ecosystem. The interface translates complex condition-assessment rules into a clear workflow connected to real-time pricing and the device resale lifecycle."
+    ],
+    [
+      "Reliability in the palm of your hand.",
+      "A mobile app running automated functional tests to check device integrity.",
+      "I developed a React Native app to run automated functional tests on mobile devices. I connected web and mobile workflows to maintain consistent data and support reverse logistics throughout the trade-in process."
+    ],
+    [
+      "Better decisions. Smarter deliveries.",
+      "An application for courier assignment, distance calculations and delivery estimates.",
+      "At iFood, I built a React and TypeScript application for delivery parameters: courier selection, restaurant-to-customer distance and estimated delivery times. I wrote tests with Jest, React Testing Library and Cypress and built accessible interfaces with SASS and Styled Components."
+    ],
+    [
+      "The journey starts with the experience.",
+      "Travel service pages connecting people with insurance, currency exchange and connectivity.",
+      "At Hurb, I built Next.js pages presenting travel services and helping users discover complementary products such as insurance, currency exchange and international SIM cards, using TypeScript, Tailwind CSS and SASS."
+    ],
+    [
+      "Many marketplaces. One operation.",
+      "Tools to manage sales and listings across major marketplaces.",
+      "At Lexos, I developed Angular and Vue.js features for a platform managing sales and listings on Mercado Livre, Shopee, AliExpress and Magalu. I integrated APIs and wrote unit tests with Karma and Jasmine."
+    ]
+  ],
+  "stackLabel": "MY TOOLKIT",
+  "stackTitle": "TOOLS THAT\nSHIP REAL\nPRODUCTS.",
+  "stackGroups": [
+    "LANGUAGES",
+    "FRONT-END & MOBILE",
+    "BACK-END & INTEGRATIONS",
+    "QUALITY & PROCESS"
+  ],
+  "journeyLabel": "EVERY STEP, A NEW PERSPECTIVE",
+  "journeyTitle": "ALONG THE WAY",
+  "experienceLabel": "EXPERIENCE",
+  "educationLabel": "EDUCATION",
+  "degree": "Analysis and Systems Development",
+  "school": "Centro Universitário União das Américas Descomplica",
+  "roles": [
+    "Co-founder & CTO",
+    "Software Engineer",
+    "Software Engineer",
+    "Front-end Teacher",
+    "Software Engineer",
+    "Front-end Developer",
+    "Mid-level Front-end Developer",
+    "Front-end Lead",
+    "Front-end Developer / IT Assistant",
+    "Front-end Developer"
+  ],
+  "experienceCopy": [
+    "From MVP to a platform with 150k+ downloads. Web, mobile, subscriptions and AI.",
+    "A trade-in ecosystem spanning device grading, pricing and automated diagnostics.",
+    "Delivery operations interfaces focused on accessibility, testing and reliability.",
+    "Teaching front-end fundamentals, modern tools, testing and accessibility.",
+    "Web experiences for discovering travel services and complementary products.",
+    "Security service hiring and management applications with API integration and testing.",
+    "Sales and listing management integrated with major marketplaces.",
+    "Leading the front-end team, introducing agile practices and prototyping UI/UX.",
+    "Sales management systems, API integration, prototyping and customer support.",
+    "A web application distributing education news to Brazilian schools."
+  ],
+  "contactLabel": "HAVE AN IDEA? LET’S TALK.",
+  "contactTitle": [
+    "LET’S BUILD",
+    "SOMETHING",
+    "EXTRAORDINARY."
+  ],
+  "contactText": "Great products start with a good conversation. I’m open to front-end, mobile and full stack challenges with teams that care about the experience.",
+  "email": "Send an email",
+  "elsewhere": "FIND ME ELSEWHERE",
+  "navigation": "EXPLORE",
+  "back": "Back to top",
+  "footer": "Made with intention. Built with code.",
+  "rights": "All rights reserved.",
+  "menuClose": "Close navigation",
+  "languageNames": {
+    "en": "English",
+    "pt": "Portuguese",
+    "es": "Spanish"
+  },
+  "portraitCaption": "FIG. 01 — GABRIEL, IN REAL LIFE.",
+  "portraitAlt": "Portrait of Gabriel Lennon",
+  "heroMotto": "FULL STACK MINDSET. FRONT-END CRAFT.",
+  "signatureMotto": "ENGINEERING WITH INTENTION.",
+  "footerSpecialties": "FULL STACK / FRONT-END / MOBILE",
+  "projectNames": [
+    "EMANU",
+    "DOJI TRADE-IN",
+    "DEVICE DIAGNOSTICS",
+    "DELIVERY INTELLIGENCE",
+    "TRAVEL EXPERIENCE",
+    "COMMERCE OPERATIONS"
+  ],
+  "projectKinds": {
+    "web": "Web",
+    "mobile": "Mobile",
+    "fullstack": "Full stack"
+  },
+  "metadata": {
+    "title": "Gabriel Lennon — Full Stack, Front-end & Mobile",
+    "description": "Full stack developer specializing in React, Next.js and React Native. Over 6 years building digital products. Former iFood and Doji engineer, and Emanu co-founder.",
+    "ogTitle": "Gabriel Lennon — Software Engineer",
+    "ogDescription": "Full stack engineering. Front-end & mobile expertise."
+  },
+  "visual": {
+    "emanuHeadline": [
+      "A moment",
+      "for your faith."
+    ],
+    "downloads": "downloads",
+    "diagnostics": "doji / diagnostics",
+    "deviceCheck": "Device check",
+    "display": "Display",
+    "camera": "Camera",
+    "audio": "Audio",
+    "mobile": "MOBILE / 02",
+    "deliveryIntelligence": "delivery intelligence",
+    "travelHeadline": [
+      "Explore.",
+      "Discover.",
+      "Go further."
+    ],
+    "travelNext": "YOUR NEXT CHAPTER",
+    "gradingPath": "doji / grading",
+    "commercePath": "lexos / commerce",
+    "deviceGrading": "DEVICE GRADING",
+    "overview": "OVERVIEW",
+    "business": "Your business, connected.",
+    "condition": "CONDITION",
+    "verified": "Verified"
+  },
+  "stackItems": [
+    [
+      "TypeScript",
+      "JavaScript (ES6+)",
+      "SQL",
+      "Python (basic)"
+    ],
+    [
+      "React",
+      "Next.js",
+      "React Native",
+      "Angular",
+      "Vue.js",
+      "HTML & CSS",
+      "SASS / SCSS",
+      "Tailwind CSS",
+      "Styled Components"
+    ],
+    [
+      "Node.js",
+      "REST APIs",
+      "Git"
+    ],
+    [
+      "Jest",
+      "Testing Library",
+      "Cypress",
+      "MSW",
+      "Karma / Jasmine",
+      "Figma",
+      "Scrum / Kanban"
+    ]
+  ],
+  "projectTags": [
+    [
+      "Next.js",
+      "React Native",
+      "Node.js",
+      "AI"
+    ],
+    [
+      "Next.js",
+      "TypeScript",
+      "React"
+    ],
+    [
+      "React Native",
+      "TypeScript",
+      "Mobile"
+    ],
+    [
+      "React",
+      "TypeScript",
+      "Cypress"
+    ],
+    [
+      "Next.js",
+      "Tailwind CSS",
+      "TypeScript"
+    ],
+    [
+      "Angular",
+      "Vue.js",
+      "Syncfusion"
+    ]
+  ]
+}
