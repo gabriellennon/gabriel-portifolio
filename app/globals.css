@@ -527,6 +527,13 @@ h2 {
   background: #e8e5de;
   transition: transform .5s
 }
+.project-screenshot {
+  background: var(--band);
+}
+.project-screenshot-image {
+  object-fit: contain;
+  padding: 10px;
+}
 .project-image-button:hover .project-visual {
   transform: scale(1.035)
 }
@@ -569,6 +576,19 @@ h2 {
 .project-title:hover>span {
   transform: translate(3px,-3px);
   color: var(--accent)
+}
+.project-website-link {
+  width: 100%;
+  min-height: 42px;
+  margin-top: 18px;
+}
+.button.project-website-link:disabled {
+  background: transparent;
+  border-color: var(--line);
+  color: var(--muted);
+  cursor: not-allowed;
+  opacity: .5;
+  transform: none;
 }
 .project-description {
   color: var(--muted);

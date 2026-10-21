@@ -1,12 +1,75 @@
 import { content, type Locale } from './i18n';
 
+export type ProjectMedia =
+  | { type: 'image'; src: string }
+  | { type: 'illustration'; id: 'hurb' };
+
 const projectDefinitions = [
-  { id: 'emanu', company: 'Emanu', kind: 'fullstack', year: '2025 — 2026' },
-  { id: 'doji', company: 'Doji', kind: 'web', year: '2025 — 2026' },
-  { id: 'device', company: 'Doji', kind: 'mobile', year: '2025 — 2026' },
-  { id: 'ifood', company: 'iFood', kind: 'web', year: '2022 — 2025' },
-  { id: 'hurb', company: 'Hurb', kind: 'web', year: '2022 — 2023' },
-  { id: 'lexos', company: 'Lexos', kind: 'web', year: '2021 — 2022' },
+  {
+    id: 'emanu', company: "Emanu", kind: 'fullstack', year: "2025 — 2026",
+    websiteUrl: "https://www.emanuapp.com/",
+    media: { type: 'image', src: '/images/projects/emanu.png' },
+  },
+  {
+    id: 'doji', company: "Doji", kind: 'web', year: "2025 — 2026",
+    websiteUrl: "https://tradein.doji.com.br/login",
+    media: { type: 'image', src: '/images/projects/dojitradein.png' },
+  },
+  {
+    id: 'device', company: "Doji", kind: 'mobile', year: "2025 — 2026",
+    websiteUrl: "https://apps.apple.com/br/app/dojicheck/id6763075570",
+    media: { type: 'image', src: '/images/projects/dojicheck.png' },
+  },
+  {
+    id: 'ifood', company: "iFood", kind: 'web', year: "2022 — 2025",
+    websiteUrl: "https://www.ifood.com.br/",
+    media: { type: 'image', src: '/images/projects/ifood.png' },
+  },
+  {
+    id: 'hurb', company: "Hurb", kind: 'web', year: "2022 — 2023",
+    websiteUrl: null,
+    media: { type: 'image', src: '/images/projects/hurb.png' },
+  },
+  {
+    id: 'lexos', company: "Lexos", kind: 'web', year: "2021 — 2022",
+    websiteUrl: "https://www.lexos.com.br/hub/",
+    media: { type: 'image', src: '/images/projects/lexos.png' },
+  },
+  {
+    id: 'vendergas', company: "Vender Gás", kind: 'web', year: null,
+    websiteUrl: "https://vendergas.com.br/",
+    media: { type: 'image', src: '/images/projects/vendergas.png' },
+  },
+  {
+    id: 'smart-performance', company: "SmartPerformance", kind: 'web', year: "2021",
+    websiteUrl: "https://smartperformance.com.br/",
+    media: { type: 'image', src: '/images/projects/smartperformance.png' },
+  },
+  {
+    id: 'wiz', company: "Wiz", kind: 'web', year: "2020 — 2022",
+    websiteUrl: "https://www.wiz.co/",
+    media: { type: 'image', src: '/images/projects/wiz.png' },
+  },
+  {
+    id: 'beerpass', company: "BeerPass", kind: 'mobile', year: null,
+    websiteUrl: "https://apps.apple.com/br/app/beerpass-club/id1605400165",
+    media: { type: 'image', src: '/images/projects/beerpass.png' },
+  },
+  {
+    id: 'dayworktools', company: "Day Work Tools", kind: 'web', year: null,
+    websiteUrl: "https://dayworktools.fun/",
+    media: { type: 'image', src: '/images/projects/dayworktools.png' },
+  },
+  {
+    id: 'seven', company: "Seven Global", kind: 'web', year: null,
+    websiteUrl: "https://sevenglobaledu.com/",
+    media: { type: 'image', src: '/images/projects/seven.png' },
+  },
+  {
+    id: 'lalale', company: "Lalale Group", kind: 'web', year: null,
+    websiteUrl: "https://lalalegroup.com",
+    media: { type: 'image', src: '/images/projects/lalale.png' },
+  },
 ] as const;
 
 export type ProjectId = (typeof projectDefinitions)[number]['id'];
@@ -18,7 +81,9 @@ export type Project = {
   id: ProjectId;
   company: string;
   kind: ProjectKind;
-  year: string;
+  year: string | null;
+  media: ProjectMedia;
+  websiteUrl: string | null;
   name: string;
   tags: string[];
   title: string;

@@ -14,7 +14,7 @@ type ProjectDialogProps = {
 
 /** Native dialog supplies focus trapping, Escape handling and focus restoration. */
 export function ProjectDialog({ project, onClose }: ProjectDialogProps) {
-  const { locale, translations: t } = useTranslations();
+  const { translations: t } = useTranslations();
   const dialogRef = useRef<HTMLDialogElement>(null);
 
   useEffect(() => {
@@ -43,8 +43,8 @@ export function ProjectDialog({ project, onClose }: ProjectDialogProps) {
         <button className="dialog-close" onClick={onClose} aria-label={t.close}>×</button>
         <SectionLabel>{t.projectContext}</SectionLabel>
         <h2 id="project-dialog-title">{project.name}</h2>
-        <p className="dialog-company">{project.company} / {project.year}</p>
-        <ProjectVisual id={project.id} translations={t} locale={locale} />
+        <p className="dialog-company">{project.company}{project.year && ` / ${project.year}`}</p>
+        <ProjectVisual project={project} translations={t} sizes="(max-width: 760px) 90vw, 580px" />
         <h3>{project.title}</h3>
         <p>{project.detail}</p>
         <TagList tags={project.tags} />

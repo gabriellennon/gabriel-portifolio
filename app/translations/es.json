@@ -39,7 +39,7 @@
   "view": "Conoce el trabajo",
   "close": "Cerrar detalles",
   "projectContext": "CONTEXTO Y CONTRIBUCIÓN",
-  "projectNote": "Las composiciones visuales representan los tipos de producto. No son capturas de las aplicaciones originales. Estos trabajos forman parte de mi experiencia en las empresas indicadas.",
+  "projectNote": "Una selección de proyectos web y móviles. Consulta los detalles o visita el sitio y la página de la aplicación.",
   "stackLabel": "MIS HERRAMIENTAS",
   "stackTitle": "TECNOLOGÍA\nQUE ENTREGA\nPRODUCTOS.",
   "stackGroups": [
@@ -231,6 +231,78 @@
         "Vue.js",
         "Syncfusion"
       ]
+    },
+    "vendergas": {
+      "name": "VENDER GÁS",
+      "title": "Gestión de ventas para distribuidores de gas.",
+      "description": "Plataforma web para operaciones comerciales de distribuidores de gas.",
+      "detail": "Gestión de ventas y operaciones diarias para distribuidores de gas, reuniendo sus flujos comerciales en una experiencia web.",
+      "tags": [
+        "Web",
+        "Gestión de ventas"
+      ]
+    },
+    "smart-performance": {
+      "name": "SMARTPERFORMANCE",
+      "title": "Interfaces para operaciones comerciales.",
+      "description": "Aplicaciones web para gestionar ventas y operaciones de negocio.",
+      "detail": "Desarrollo front-end con Angular, prototipos de UI/UX en Figma y coordinación de las actividades de front-end, como parte de mi experiencia en SmartPerformance.",
+      "tags": [
+        "Angular",
+        "Figma",
+        "Front-end"
+      ]
+    },
+    "wiz": {
+      "name": "WIZ SEGUROS",
+      "title": "Experiencias web para servicios.",
+      "description": "Aplicaciones web, gestión de servicios e integración de APIs.",
+      "detail": "Desarrollo front-end con Angular y React, integración de APIs y pruebas unitarias con Karma y Jasmine, como parte de mi experiencia en Wiz.",
+      "tags": [
+        "Angular",
+        "React",
+        "Karma / Jasmine"
+      ]
+    },
+    "beerpass": {
+      "name": "BEERPASS",
+      "title": "La experiencia del club, en el móvil.",
+      "description": "Experiencia móvil para el club BeerPass.",
+      "detail": "BeerPass Club lleva la experiencia del club al móvil. La vista previa muestra pantallas de la aplicación; el enlace abre su página en la App Store.",
+      "tags": [
+        "Mobile",
+        "iOS"
+      ]
+    },
+    "dayworktools": {
+      "name": "DAY WORK TOOLS",
+      "title": "Herramientas cotidianas, reunidas.",
+      "description": "Un espacio de productividad con tareas, notas y herramientas de concentración.",
+      "detail": "Day Work Tools reúne herramientas de productividad en una experiencia web, incluyendo lista de tareas, bloc de notas y actividades en foco.",
+      "tags": [
+        "Web",
+        "Productividad"
+      ]
+    },
+    "seven": {
+      "name": "SEVEN GLOBAL",
+      "title": "Una ventana a experiencias internacionales.",
+      "description": "Sitio institucional que presenta experiencias de educación internacional.",
+      "detail": "Seven Global presenta sus programas de educación internacional mediante una experiencia web dedicada a la organización y a sus programas.",
+      "tags": [
+        "Web",
+        "Educación"
+      ]
+    },
+    "lalale": {
+      "name": "LALALE FOODS",
+      "title": "Gastronomía, eventos y presencia de marca.",
+      "description": "Sitio institucional de Lalale Group y sus servicios gastronómicos.",
+      "detail": "El sitio de Lalale Group presenta al grupo y sus servicios de gastronomía, eventos y producción de alimentos en una presencia digital compartida.",
+      "tags": [
+        "Web",
+        "Institucional"
+      ]
     }
   },
   "experience": {
@@ -280,5 +352,9 @@
     "web": "Web",
     "mobile": "Mobile",
     "fullstack": "Full stack"
+  },
+  "projectWebsite": {
+    "label": "Visitar sitio",
+    "unavailable": "Enlace al sitio próximamente"
   }
 }

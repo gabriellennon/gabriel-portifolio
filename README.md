@@ -47,8 +47,8 @@ Browser preferences use `useSyncExternalStore`, with deterministic server snapsh
 
 - **Edit a section:** update its named component in `app/components/sections/`.
 - **Change copy:** update the corresponding keys in all three JSON dictionaries. English defines the TypeScript dictionary shape.
-- **Add a project or experience:** add its stable ID and factual record in `app/content.ts`, then add its localized copy under that ID in each dictionary. New project visuals are registered in `project-visual.tsx`.
+- **Add a project or experience:** add its stable ID and factual record in `app/content.ts`, then add its localized copy under that ID in each dictionary. Set its `media` record to an image path under `public/`, or use the Hurb illustration fallback. Set `websiteUrl` in the project record to enable its external website button; leave it `null` when no public link is available.
 - **Update contact details or assets:** edit `app/lib/site.ts`.
 - **Change appearance:** edit the existing classes in `app/globals.css`; section components preserve the same layout classes.
 
-Project illustrations are conceptual representations of the products described, not screenshots of proprietary applications.
+Project previews use the supplied images; Hurb retains an illustrative composition.
