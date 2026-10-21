@@ -1,11 +1,11 @@
 {
-  "nav": [
-    "About",
-    "Work",
-    "Stack",
-    "Journey",
-    "Contact"
-  ],
+  "nav": {
+    "about": "About",
+    "work": "Work",
+    "stack": "Stack",
+    "journey": "Journey",
+    "contact": "Contact"
+  },
   "talk": "Let’s talk",
   "skip": "Skip to content",
   "theme": "Toggle theme",
@@ -35,56 +35,61 @@
   "focus": "Experience, quality and impact.",
   "projectsLabel": "FROM CODE TO REAL PRODUCTS",
   "projectsTitle": "SELECTED WORK",
-  "filters": [
-    "All",
-    "Web",
-    "Mobile",
-    "Full stack"
-  ],
   "illustration": "ILLUSTRATIVE COMPOSITION",
   "view": "Explore the work",
   "close": "Close details",
   "projectContext": "CONTEXT & CONTRIBUTION",
   "projectNote": "Visual compositions represent the types of product, rather than screenshots of the original applications. This work was delivered as part of my roles at the companies shown.",
-  "projectCopy": [
-    [
-      "From an idea to 150k+ downloads.",
-      "A faith and spiritual growth platform with personalized experiences, subscriptions and AI.",
-      "As co-founder and CTO, I built the web platform and mobile app with React, Next.js, React Native and Node.js. I designed and launched the premium subscription journey and integrated AI features to support users in their spiritual growth."
-    ],
-    [
-      "Complex under the hood. Simple on screen.",
-      "Device grading with condition-assessment rules and real-time pricing.",
-      "I developed the Next.js Grading system for Doji’s trade-in ecosystem. The interface translates complex condition-assessment rules into a clear workflow connected to real-time pricing and the device resale lifecycle."
-    ],
-    [
-      "Reliability in the palm of your hand.",
-      "A mobile app running automated functional tests to check device integrity.",
-      "I developed a React Native app to run automated functional tests on mobile devices. I connected web and mobile workflows to maintain consistent data and support reverse logistics throughout the trade-in process."
-    ],
-    [
-      "Better decisions. Smarter deliveries.",
-      "An application for courier assignment, distance calculations and delivery estimates.",
-      "At iFood, I built a React and TypeScript application for delivery parameters: courier selection, restaurant-to-customer distance and estimated delivery times. I wrote tests with Jest, React Testing Library and Cypress and built accessible interfaces with SASS and Styled Components."
-    ],
-    [
-      "The journey starts with the experience.",
-      "Travel service pages connecting people with insurance, currency exchange and connectivity.",
-      "At Hurb, I built Next.js pages presenting travel services and helping users discover complementary products such as insurance, currency exchange and international SIM cards, using TypeScript, Tailwind CSS and SASS."
-    ],
-    [
-      "Many marketplaces. One operation.",
-      "Tools to manage sales and listings across major marketplaces.",
-      "At Lexos, I developed Angular and Vue.js features for a platform managing sales and listings on Mercado Livre, Shopee, AliExpress and Magalu. I integrated APIs and wrote unit tests with Karma and Jasmine."
-    ]
-  ],
   "stackLabel": "MY TOOLKIT",
   "stackTitle": "TOOLS THAT\nSHIP REAL\nPRODUCTS.",
   "stackGroups": [
-    "LANGUAGES",
-    "FRONT-END & MOBILE",
-    "BACK-END & INTEGRATIONS",
-    "QUALITY & PROCESS"
+    {
+      "id": "languages",
+      "title": "LANGUAGES",
+      "items": [
+        "TypeScript",
+        "JavaScript (ES6+)",
+        "SQL",
+        "Python (basic)"
+      ]
+    },
+    {
+      "id": "frontend",
+      "title": "FRONT-END & MOBILE",
+      "items": [
+        "React",
+        "Next.js",
+        "React Native",
+        "Angular",
+        "Vue.js",
+        "HTML & CSS",
+        "SASS / SCSS",
+        "Tailwind CSS",
+        "Styled Components"
+      ]
+    },
+    {
+      "id": "backend",
+      "title": "BACK-END & INTEGRATIONS",
+      "items": [
+        "Node.js",
+        "REST APIs",
+        "Git"
+      ]
+    },
+    {
+      "id": "quality",
+      "title": "QUALITY & PROCESS",
+      "items": [
+        "Jest",
+        "Testing Library",
+        "Cypress",
+        "MSW",
+        "Karma / Jasmine",
+        "Figma",
+        "Scrum / Kanban"
+      ]
+    }
   ],
   "journeyLabel": "EVERY STEP, A NEW PERSPECTIVE",
   "journeyTitle": "ALONG THE WAY",
@@ -92,30 +97,6 @@
   "educationLabel": "EDUCATION",
   "degree": "Analysis and Systems Development",
   "school": "Centro Universitário União das Américas Descomplica",
-  "roles": [
-    "Co-founder & CTO",
-    "Software Engineer",
-    "Software Engineer",
-    "Front-end Teacher",
-    "Software Engineer",
-    "Front-end Developer",
-    "Mid-level Front-end Developer",
-    "Front-end Lead",
-    "Front-end Developer / IT Assistant",
-    "Front-end Developer"
-  ],
-  "experienceCopy": [
-    "From MVP to a platform with 150k+ downloads. Web, mobile, subscriptions and AI.",
-    "A trade-in ecosystem spanning device grading, pricing and automated diagnostics.",
-    "Delivery operations interfaces focused on accessibility, testing and reliability.",
-    "Teaching front-end fundamentals, modern tools, testing and accessibility.",
-    "Web experiences for discovering travel services and complementary products.",
-    "Security service hiring and management applications with API integration and testing.",
-    "Sales and listing management integrated with major marketplaces.",
-    "Leading the front-end team, introducing agile practices and prototyping UI/UX.",
-    "Sales management systems, API integration, prototyping and customer support.",
-    "A web application distributing education news to Brazilian schools."
-  ],
   "contactLabel": "HAVE AN IDEA? LET’S TALK.",
   "contactTitle": [
     "LET’S BUILD",
@@ -140,14 +121,6 @@
   "heroMotto": "FULL STACK MINDSET. FRONT-END CRAFT.",
   "signatureMotto": "ENGINEERING WITH INTENTION.",
   "footerSpecialties": "FULL STACK / FRONT-END / MOBILE",
-  "projectNames": [
-    "EMANU",
-    "DOJI TRADE-IN",
-    "DEVICE DIAGNOSTICS",
-    "DELIVERY INTELLIGENCE",
-    "TRAVEL EXPERIENCE",
-    "COMMERCE OPERATIONS"
-  ],
   "projectKinds": {
     "web": "Web",
     "mobile": "Mobile",
@@ -186,75 +159,126 @@
     "condition": "CONDITION",
     "verified": "Verified"
   },
-  "stackItems": [
-    [
-      "TypeScript",
-      "JavaScript (ES6+)",
-      "SQL",
-      "Python (basic)"
-    ],
-    [
-      "React",
-      "Next.js",
-      "React Native",
-      "Angular",
-      "Vue.js",
-      "HTML & CSS",
-      "SASS / SCSS",
-      "Tailwind CSS",
-      "Styled Components"
-    ],
-    [
-      "Node.js",
-      "REST APIs",
-      "Git"
-    ],
-    [
-      "Jest",
-      "Testing Library",
-      "Cypress",
-      "MSW",
-      "Karma / Jasmine",
-      "Figma",
-      "Scrum / Kanban"
-    ]
-  ],
-  "projectTags": [
-    [
-      "Next.js",
-      "React Native",
-      "Node.js",
-      "AI"
-    ],
-    [
-      "Next.js",
-      "TypeScript",
-      "React"
-    ],
-    [
-      "React Native",
-      "TypeScript",
-      "Mobile"
-    ],
-    [
-      "React",
-      "TypeScript",
-      "Cypress"
-    ],
-    [
-      "Next.js",
-      "Tailwind CSS",
-      "TypeScript"
-    ],
-    [
-      "Angular",
-      "Vue.js",
-      "Syncfusion"
-    ]
-  ],
   "contactLinks": {
     "whatsapp": "WhatsApp",
     "linkedin": "LinkedIn",
     "github": "GitHub"
+  },
+  "projects": {
+    "emanu": {
+      "name": "EMANU",
+      "title": "From an idea to 150k+ downloads.",
+      "description": "A faith and spiritual growth platform with personalized experiences, subscriptions and AI.",
+      "detail": "As co-founder and CTO, I built the web platform and mobile app with React, Next.js, React Native and Node.js. I designed and launched the premium subscription journey and integrated AI features to support users in their spiritual growth.",
+      "tags": [
+        "Next.js",
+        "React Native",
+        "Node.js",
+        "AI"
+      ]
+    },
+    "doji": {
+      "name": "DOJI TRADE-IN",
+      "title": "Complex under the hood. Simple on screen.",
+      "description": "Device grading with condition-assessment rules and real-time pricing.",
+      "detail": "I developed the Next.js Grading system for Doji’s trade-in ecosystem. The interface translates complex condition-assessment rules into a clear workflow connected to real-time pricing and the device resale lifecycle.",
+      "tags": [
+        "Next.js",
+        "TypeScript",
+        "React"
+      ]
+    },
+    "device": {
+      "name": "DEVICE DIAGNOSTICS",
+      "title": "Reliability in the palm of your hand.",
+      "description": "A mobile app running automated functional tests to check device integrity.",
+      "detail": "I developed a React Native app to run automated functional tests on mobile devices. I connected web and mobile workflows to maintain consistent data and support reverse logistics throughout the trade-in process.",
+      "tags": [
+        "React Native",
+        "TypeScript",
+        "Mobile"
+      ]
+    },
+    "ifood": {
+      "name": "DELIVERY INTELLIGENCE",
+      "title": "Better decisions. Smarter deliveries.",
+      "description": "An application for courier assignment, distance calculations and delivery estimates.",
+      "detail": "At iFood, I built a React and TypeScript application for delivery parameters: courier selection, restaurant-to-customer distance and estimated delivery times. I wrote tests with Jest, React Testing Library and Cypress and built accessible interfaces with SASS and Styled Components.",
+      "tags": [
+        "React",
+        "TypeScript",
+        "Cypress"
+      ]
+    },
+    "hurb": {
+      "name": "TRAVEL EXPERIENCE",
+      "title": "The journey starts with the experience.",
+      "description": "Travel service pages connecting people with insurance, currency exchange and connectivity.",
+      "detail": "At Hurb, I built Next.js pages presenting travel services and helping users discover complementary products such as insurance, currency exchange and international SIM cards, using TypeScript, Tailwind CSS and SASS.",
+      "tags": [
+        "Next.js",
+        "Tailwind CSS",
+        "TypeScript"
+      ]
+    },
+    "lexos": {
+      "name": "COMMERCE OPERATIONS",
+      "title": "Many marketplaces. One operation.",
+      "description": "Tools to manage sales and listings across major marketplaces.",
+      "detail": "At Lexos, I developed Angular and Vue.js features for a platform managing sales and listings on Mercado Livre, Shopee, AliExpress and Magalu. I integrated APIs and wrote unit tests with Karma and Jasmine.",
+      "tags": [
+        "Angular",
+        "Vue.js",
+        "Syncfusion"
+      ]
+    }
+  },
+  "experience": {
+    "emanu": {
+      "role": "Co-founder & CTO",
+      "description": "From MVP to a platform with 150k+ downloads. Web, mobile, subscriptions and AI."
+    },
+    "doji": {
+      "role": "Software Engineer",
+      "description": "A trade-in ecosystem spanning device grading, pricing and automated diagnostics."
+    },
+    "ifood": {
+      "role": "Software Engineer",
+      "description": "Delivery operations interfaces focused on accessibility, testing and reliability."
+    },
+    "gama": {
+      "role": "Front-end Teacher",
+      "description": "Teaching front-end fundamentals, modern tools, testing and accessibility."
+    },
+    "hurb": {
+      "role": "Software Engineer",
+      "description": "Web experiences for discovering travel services and complementary products."
+    },
+    "wiz": {
+      "role": "Front-end Developer",
+      "description": "Security service hiring and management applications with API integration and testing."
+    },
+    "lexos": {
+      "role": "Mid-level Front-end Developer",
+      "description": "Sales and listing management integrated with major marketplaces."
+    },
+    "smart-performance": {
+      "role": "Front-end Lead",
+      "description": "Leading the front-end team, introducing agile practices and prototyping UI/UX."
+    },
+    "bilin": {
+      "role": "Front-end Developer / IT Assistant",
+      "description": "Sales management systems, API integration, prototyping and customer support."
+    },
+    "fnde": {
+      "role": "Front-end Developer",
+      "description": "A web application distributing education news to Brazilian schools."
+    }
+  },
+  "projectFilters": {
+    "all": "All",
+    "web": "Web",
+    "mobile": "Mobile",
+    "fullstack": "Full stack"
   }
 }

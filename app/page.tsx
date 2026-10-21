@@ -1,64 +1,26 @@
-'use client';
-import Image from 'next/image';
-import { useEffect, useRef, useState } from 'react';
-import { content, getProjects, getExperience, type Locale, type Project } from './content';
-import { defaultLocale, isLocale, localeConfig, locales, localeStorageKey, type Translations } from './i18n';
-const ids = ['about', 'work', 'stack', 'journey', 'contact'];
-function Arrow() { return <span aria-hidden="true">↗</span>; }
-function Label({ children }: { children: React.ReactNode }) { return <p className="eyebrow"><span /> {children}</p>; }
-function ProjectVisual({ project, t, locale }: { project: Project; t: Translations; locale: Locale }) {
-  const v = t.visual;
-  const number = new Intl.NumberFormat(locale, { maximumFractionDigits: 1 });
-  return <div className={`project-visual visual-${project.visual}`} aria-hidden="true">
-    {project.visual === 'emanu' ? <><div className="emanu-word">emanu<span>✳</span></div><div className="phone"><div className="phone-camera" /><small>emanu</small><div className="phone-sun">✳</div><strong>{v.emanuHeadline[0]}<br />{v.emanuHeadline[1]}</strong><div className="phone-card">✧<i /><i /><i /></div><div className="phone-tabs">⌂　♡　◉　☷</div></div><div className="floating-note">150k+<small>{v.downloads}</small></div></> :
-      project.visual === 'device' ? <><div className="diagnostic-orbit" /><div className="phone diagnostic"><div className="phone-camera" /><small>{v.diagnostics}</small><div className="check-ring">✓</div><strong>{v.deviceCheck}</strong><div className="diagnostic-row">{v.display} <span>✓</span></div><div className="diagnostic-row">{v.camera} <span>✓</span></div><div className="diagnostic-row">{v.audio} <span>✓</span></div><div className="progress-bar" /></div><span className="visual-coordinate">{v.mobile}</span></> :
-        project.visual === 'ifood' ? <><div className="delivery-map"><svg viewBox="0 0 400 240"><path className="map-road" d="M-10 60L410 190M40 -20L160 260M-10 180L410 40M220 -20L320 260M-10 120L410 110" /><path className="map-route" d="M70 160L130 139L170 145L234 92L308 108" /><circle cx="70" cy="160" r="7" /><circle cx="308" cy="108" r="7" /></svg><div className="map-label">iFood<span>{v.deliveryIntelligence}</span></div><div className="map-card"><span>↗</span><b>24 min<small>{number.format(2.4)} km</small></b><i>● ● ●</i></div></div></> :
-          project.visual === 'hurb' ? <><div className="travel-sun" /><div className="travel-mountain one" /><div className="travel-mountain two" /><div className="travel-window"><small>hurb.</small><strong>{v.travelHeadline[0]}<br />{v.travelHeadline[1]}<br />{v.travelHeadline[2]}</strong><span>{v.travelNext}　↗</span></div></> :
-            <div className={`browser-window ${project.visual}`}><div className="browser-chrome"><i /><i /><i /><span>{project.visual === 'doji' ? v.gradingPath : v.commercePath}</span></div><div className="dashboard"><aside><b>{project.visual === 'doji' ? 'doji.' : 'lexos'}</b><i /><i /><i /><i /></aside><div className="dashboard-content"><small>{project.visual === 'doji' ? v.deviceGrading : v.overview}</small><div className="dashboard-top"><b>{project.visual === 'doji' ? 'iPhone 14 Pro' : v.business}</b><span>↗</span></div>{project.visual === 'doji' ? <div className="grade-content"><div className="mini-device" /><div><span>{v.condition}</span><strong>A+</strong><i /><i /><div className="grade-chip">✓ {v.verified}</div></div></div> : <><div className="stat-blocks"><i /><i /><i /></div><div className="chart">{[30, 50, 40, 65, 48, 78, 68, 90, 74, 98].map((n, i) => <i key={i} style={{ height: n + '%' }} />)}</div></>}</div></div></div>}
-    <span className="visual-caption">{t.illustration}</span>
-  </div>;
-}
+import { LocaleProvider } from './providers/locale-provider';
+import { SiteHeader } from './components/layout/site-header';
+import { SiteFooter } from './components/layout/site-footer';
+import { HeroSection } from './components/sections/hero-section';
+import { AboutSection } from './components/sections/about-section';
+import { ProjectsSection } from './components/sections/projects-section';
+import { StackSection } from './components/sections/stack-section';
+import { JourneySection } from './components/sections/journey-section';
+import { ContactSection } from './components/sections/contact-section';
+
 export default function Home() {
-  const [locale, setLocale] = useState<Locale>(defaultLocale); const [dark, setDark] = useState(false); const [menu, setMenu] = useState(false); const [filter, setFilter] = useState('all'); const [selected, setSelected] = useState<Project | null>(null); const dialog = useRef<HTMLDialogElement>(null); const ready = useRef(false);
-  const t = content[locale]; const projects = getProjects(locale);
-  useEffect(() => { try { const saved = localStorage.getItem(localeStorageKey); if (isLocale(saved)) setLocale(saved); setDark(localStorage.getItem('gl-theme') === 'dark'); } catch { } ready.current = true; }, []);
-  useEffect(() => {
-    document.documentElement.lang = localeConfig[locale].htmlLang;
-    document.title = t.metadata.title;
-    const metadata = [
-      ['name', 'description', t.metadata.description],
-      ['property', 'og:title', t.metadata.ogTitle],
-      ['property', 'og:description', t.metadata.ogDescription],
-      ['property', 'og:locale', localeConfig[locale].openGraph],
-    ];
-    metadata.forEach(([attribute, name, value]) => {
-      document.querySelector<HTMLMetaElement>(`meta[${attribute}="${name}"]`)?.setAttribute('content', value);
-    });
-  }, [locale, t]);
-  function changeLocale(nextLocale: Locale) {
-    setLocale(nextLocale);
-    try { localStorage.setItem(localeStorageKey, nextLocale); } catch { /* Language switching also works without storage. */ }
-  }
-  useEffect(() => { document.documentElement.dataset.theme = dark ? 'dark' : 'light'; try { if (ready.current) localStorage.setItem('gl-theme', dark ? 'dark' : 'light'); } catch { } }, [dark]);
-  useEffect(() => { document.documentElement.classList.add('motion-ready'); const observer = new IntersectionObserver(entries => entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('is-visible'); observer.unobserve(e.target); } }), { threshold: .08 }); document.querySelectorAll('.reveal').forEach(el => observer.observe(el)); return () => observer.disconnect(); }, [filter]);
-  useEffect(() => { if (selected) { dialog.current?.showModal(); document.body.style.overflow = 'hidden'; } return () => { document.body.style.overflow = ''; }; }, [selected]);
-  function close() { dialog.current?.close(); setSelected(null); }
-  return <>
-    <a className="skip-link" href="#main">{t.skip}</a>
-    <header className="header wrap" id="top"><a href="#top" className="wordmark" aria-label="Gabriel Lennon">GABRIEL LENNON<span>.</span></a><nav className={menu ? 'nav is-open' : 'nav'} aria-label={t.navigation}>{t.nav.map((n, i) => <a key={ids[i]} href={`#${ids[i]}`} onClick={() => setMenu(false)}>{n}</a>)}</nav><div className="header-actions"><div className="languages" role="group" aria-label={t.language}>{locales.map(l => <button key={l} onClick={() => changeLocale(l)} aria-pressed={locale === l} aria-label={t.languageNames[l]}>{l.toUpperCase()}</button>)}</div><button className="theme-toggle" aria-label={t.theme} aria-pressed={dark} onClick={() => setDark(!dark)}>{dark ? '☀' : '◐'}</button><a className="button small header-cta" href="#contact">{t.talk} <Arrow /></a><button className="menu-toggle" aria-label={menu ? t.menuClose : t.menu} aria-expanded={menu} onClick={() => setMenu(!menu)}>{menu ? '×' : '☰'}</button></div></header>
-    <main id="main">
-      <section className="hero wrap"><div className="hero-copy"><p className="eyebrow hero-kicker">{t.kicker}</p><h1>{t.hero.map((line, i) => <span key={line} className={i === 2 ? 'underline-accent' : ''}>{line}</span>)}</h1><p className="hero-description">{t.intro}</p><div className="hero-buttons"><a className="button" href="#work">{t.work}<Arrow /></a><a className="button outline" href="/documents/gabriel-lennon-resume.pdf" download>{t.resume}<span aria-hidden="true">↓</span></a></div></div><div className="hero-art"><p className="location">{t.location}<br /><span>15°47′ S　47°53′ W</span></p><div className="portrait-backdrop" /><div className="portrait-frame"><Image src="/images/gabriel-lennon.png" alt={t.portraitAlt} width={800} height={800} priority className="portrait" /></div><span className="portrait-index">{t.portraitCaption}</span><div className="availability"><span />{t.available}</div><span className="art-cross" aria-hidden="true">+</span></div><div className="hero-bottom"><span>{t.heroMotto}</span><a href="#about">{t.scroll}<span>↓</span></a></div></section>
-      <section className="about wrap section reveal" id="about"><div className="about-copy"><Label>{t.aboutLabel}</Label><h2 className="about-title">{t.aboutTitle}</h2><p>{t.aboutText}</p><p>{t.aboutMore}</p><div className="about-signature"><span className="signature">Gabriel Lennon</span><span>{t.signatureMotto}</span></div></div><div className="about-stats"><div className="big-stat">6<span>+</span></div><p className="stat-heading">{t.years}</p><div className="stat-row"><b>150k+</b><span>{t.downloads}</span></div><div className="stat-row"><b>3+</b><span>{t.ifood}</span></div><div className="stat-row"><b>02</b><span>{t.platforms}</span></div><div className="focus-note"><span>{t.focusLabel}</span><p>{t.focus}</p><span className="asterisk" aria-hidden="true">✳</span></div></div></section>
-      <section className="work wrap section" id="work"><div className="section-heading reveal"><div><Label>{t.projectsLabel}</Label><h2>{t.projectsTitle}</h2></div><div className="filters" role="group" aria-label={t.projectsTitle}>{['all', 'web', 'mobile', 'fullstack'].map((f, i) => <button key={f} className={filter === f ? 'active' : ''} onClick={() => setFilter(f)} aria-pressed={filter === f}>{t.filters[i]}{filter === f && <span> / {f === 'all' ? '06' : f === 'web' ? '04' : '01'}</span>}</button>)}</div></div><div className="projects-grid">{projects.filter(p => filter === 'all' || p.kind === filter).map((p) => <article className="project reveal" key={p.visual}><button className="project-image-button" onClick={() => setSelected(p)} aria-label={`${t.view}: ${p.name}`}><ProjectVisual project={p} t={t} locale={locale} /><span className="project-image-arrow"><Arrow /></span></button><div className="project-meta"><span>{p.company} / {t.projectKinds[p.kind]}</span><span>{p.year}</span></div><button className="project-title" onClick={() => setSelected(p)}><h3>{p.name}</h3><Arrow /></button><p className="project-description">{p.description}</p><div className="tags">{p.tags.map(tag => <span key={tag}>{tag}</span>)}</div></article>)}</div><p className="project-disclaimer">{t.projectNote}</p><a href="https://github.com/gabriellennon" className="text-link" target="_blank" rel="noreferrer">GITHUB <Arrow /></a></section>
-      <section className="stack-band" id="stack"><div className="wrap stack-inner reveal"><div><Label>{t.stackLabel}</Label><h2>{t.stackTitle}</h2></div><div className="stack-grid">{t.stackItems.map((group, i) => <div className="stack-group" key={i}><h3>{t.stackGroups[i]}</h3><div className="tags">{group.map(tag => <span key={tag}>{tag}</span>)}</div></div>)}</div></div></section>
-      <section className="journey wrap section" id="journey"><div className="section-heading reveal"><div><Label>{t.journeyLabel}</Label><h2>{t.journeyTitle}</h2></div><span className="journey-years">2019 — 2026</span></div><div className="timeline-label"><span>{t.experienceLabel}</span><span>01 — 10</span></div><div className="timeline">{getExperience(locale).map((e, i) => <article className="timeline-item reveal" key={e.company}><span className="timeline-date">{e.date}</span><div className="timeline-content"><h3>{e.role}</h3><p className="company">{e.company}</p><p>{e.description}</p><span className="timeline-stack">{e.stack}</span></div><span className="timeline-number">/ {String(i + 1).padStart(2, '0')}</span></article>)}</div><div className="education reveal"><span className="timeline-date">2022 — 2025</span><div><span className="education-label">{t.educationLabel}</span><h3>{t.degree}</h3><p>{t.school}</p></div><span className="timeline-number">↗</span></div></section>
-      <section className="contact-band" id="contact"><div className="wrap contact-inner reveal"><div><Label>{t.contactLabel}</Label><h2>{t.contactTitle.map((l, i) => <span className={i === 2 ? 'red' : ''} key={l}>{l}</span>)}</h2></div><div className="contact-copy"><p>{t.contactText}</p><div className="contact-links">
-          <a className="button" href="mailto:gabriellennon7@gmail.com">{t.email}<Arrow /></a>
-          <a className="button outline" href="https://wa.link/jud2ij" target="_blank" rel="noopener noreferrer">{t.contactLinks.whatsapp}<Arrow /></a>
-          <a className="button outline" href="https://www.linkedin.com/in/gabriellennon" target="_blank" rel="noopener noreferrer">{t.contactLinks.linkedin}<Arrow /></a>
-          <a className="button outline" href="https://github.com/gabriellennon" target="_blank" rel="noopener noreferrer">{t.contactLinks.github}<Arrow /></a>
-        </div><a className="contact-email" href="mailto:gabriellennon7@gmail.com">gabriellennon7@gmail.com</a></div><div className="contact-shape" aria-hidden="true" /></div></section>
-    </main><footer className="footer"><div className="wrap"><div className="footer-top"><div><a href="#top" className="wordmark">GABRIEL LENNON<span>.</span></a><p>{t.footer}</p><p>{t.footerSpecialties}</p></div><div><h3>{t.navigation}</h3>{t.nav.map((n, i) => <a key={n} href={`#${ids[i]}`}>{n}</a>)}</div><div><h3>{t.elsewhere}</h3><a href="https://github.com/gabriellennon" target="_blank" rel="noreferrer">GitHub ↗</a><a href="https://www.linkedin.com/in/gabriellennon" target="_blank" rel="noreferrer">LinkedIn ↗</a><a href="/documents/gabriel-lennon-resume.pdf" download>{t.resume} ↓</a></div><div><h3>{t.nav[4]}</h3><a href="mailto:gabriellennon7@gmail.com">gabriellennon7@gmail.com ↗</a><p>{t.location}</p></div></div><div className="footer-bottom"><span>© 2026 Gabriel Lennon. {t.rights}</span><a href="#top">{t.back} ↑</a></div></div></footer>
-    <dialog ref={dialog} className="project-dialog" aria-labelledby="project-dialog-title" onCancel={() => setSelected(null)} onClick={e => { if (e.target === e.currentTarget) close(); }} onClose={() => setSelected(null)}>{selected && <div className="dialog-inner"><button className="dialog-close" onClick={close} aria-label={t.close}>×</button><Label>{t.projectContext}</Label><h2 id="project-dialog-title">{selected.name}</h2><p className="dialog-company">{selected.company} / {selected.year}</p><ProjectVisual project={selected} t={t} locale={locale} /><h3>{selected.title}</h3><p>{selected.detail}</p><div className="tags">{selected.tags.map(tag => <span key={tag}>{tag}</span>)}</div></div>}</dialog>
-  </>;
+  return (
+    <LocaleProvider>
+      <SiteHeader />
+      <main id="main">
+        <HeroSection />
+        <AboutSection />
+        <ProjectsSection />
+        <StackSection />
+        <JourneySection />
+        <ContactSection />
+      </main>
+      <SiteFooter />
+    </LocaleProvider>
+  );
 }

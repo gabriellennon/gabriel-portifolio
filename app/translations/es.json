@@ -1,11 +1,11 @@
 {
-  "nav": [
-    "Sobre mí",
-    "Proyectos",
-    "Stack",
-    "Trayectoria",
-    "Contacto"
-  ],
+  "nav": {
+    "about": "Sobre mí",
+    "work": "Proyectos",
+    "stack": "Stack",
+    "journey": "Trayectoria",
+    "contact": "Contacto"
+  },
   "talk": "Hablemos",
   "skip": "Saltar al contenido",
   "theme": "Cambiar tema",
@@ -35,56 +35,61 @@
   "focus": "Experiencia, calidad e impacto.",
   "projectsLabel": "DEL CÓDIGO AL PRODUCTO",
   "projectsTitle": "TRABAJOS SELECCIONADOS",
-  "filters": [
-    "Todos",
-    "Web",
-    "Mobile",
-    "Full stack"
-  ],
   "illustration": "COMPOSICIÓN ILUSTRATIVA",
   "view": "Conoce el trabajo",
   "close": "Cerrar detalles",
   "projectContext": "CONTEXTO Y CONTRIBUCIÓN",
   "projectNote": "Las composiciones visuales representan los tipos de producto. No son capturas de las aplicaciones originales. Estos trabajos forman parte de mi experiencia en las empresas indicadas.",
-  "projectCopy": [
-    [
-      "De una idea a más de 150 mil descargas.",
-      "Plataforma de fe y crecimiento espiritual con experiencias personalizadas, suscripciones e IA.",
-      "Como cofundador y CTO, desarrollé la plataforma web y la aplicación mobile con React, Next.js, React Native y Node.js. Diseñé y lancé el flujo de suscripción premium e integré funciones de IA para acompañar a los usuarios en su crecimiento espiritual."
-    ],
-    [
-      "Complejidad por dentro. Sencillez en pantalla.",
-      "Evaluación de dispositivos con reglas de condición y precios en tiempo real.",
-      "Desarrollé el sistema de Grading en Next.js para el ecosistema de trade-in de Doji. La interfaz convierte reglas complejas de evaluación en un flujo claro, conectado a los precios en tiempo real y al ciclo de reventa de los dispositivos."
-    ],
-    [
-      "Fiabilidad en la palma de la mano.",
-      "Una aplicación que ejecuta pruebas funcionales automatizadas para verificar dispositivos.",
-      "Desarrollé una aplicación en React Native para ejecutar pruebas funcionales automatizadas en dispositivos móviles. Integré los flujos web y mobile para mantener los datos consistentes y apoyar la logística inversa del proceso de trade-in."
-    ],
-    [
-      "Mejores decisiones. Entregas inteligentes.",
-      "Una aplicación para asignar repartidores, calcular distancias y estimar entregas.",
-      "En iFood, desarrollé una aplicación con React y TypeScript para calcular parámetros de entrega: selección del repartidor, distancia entre restaurante y cliente y tiempo estimado. Escribí pruebas con Jest, React Testing Library y Cypress y construí interfaces accesibles con SASS y Styled Components."
-    ],
-    [
-      "El viaje empieza en la experiencia.",
-      "Páginas de servicios de viaje: seguros, cambio de divisas y conectividad.",
-      "En Hurb, desarrollé páginas en Next.js para presentar servicios de viaje y facilitar el descubrimiento de seguros, cambio de divisas y tarjetas SIM internacionales, utilizando TypeScript, Tailwind CSS y SASS."
-    ],
-    [
-      "Varios marketplaces. Una operación.",
-      "Herramientas para gestionar ventas y anuncios en los principales marketplaces.",
-      "En Lexos, desarrollé funciones con Angular y Vue.js para gestionar ventas y anuncios en Mercado Livre, Shopee, AliExpress y Magalu. Integré APIs y escribí pruebas unitarias con Karma y Jasmine."
-    ]
-  ],
   "stackLabel": "MIS HERRAMIENTAS",
   "stackTitle": "TECNOLOGÍA\nQUE ENTREGA\nPRODUCTOS.",
   "stackGroups": [
-    "LENGUAJES",
-    "FRONT-END Y MOBILE",
-    "BACK-END E INTEGRACIONES",
-    "CALIDAD Y PROCESO"
+    {
+      "id": "languages",
+      "title": "LENGUAJES",
+      "items": [
+        "TypeScript",
+        "JavaScript (ES6+)",
+        "SQL",
+        "Python (básico)"
+      ]
+    },
+    {
+      "id": "frontend",
+      "title": "FRONT-END Y MOBILE",
+      "items": [
+        "React",
+        "Next.js",
+        "React Native",
+        "Angular",
+        "Vue.js",
+        "HTML & CSS",
+        "SASS / SCSS",
+        "Tailwind CSS",
+        "Styled Components"
+      ]
+    },
+    {
+      "id": "backend",
+      "title": "BACK-END E INTEGRACIONES",
+      "items": [
+        "Node.js",
+        "APIs REST",
+        "Git"
+      ]
+    },
+    {
+      "id": "quality",
+      "title": "CALIDAD Y PROCESO",
+      "items": [
+        "Jest",
+        "Testing Library",
+        "Cypress",
+        "MSW",
+        "Karma / Jasmine",
+        "Figma",
+        "Scrum / Kanban"
+      ]
+    }
   ],
   "journeyLabel": "CADA PASO, UNA NUEVA PERSPECTIVA",
   "journeyTitle": "A LO LARGO DEL CAMINO",
@@ -92,30 +97,6 @@
   "educationLabel": "FORMACIÓN",
   "degree": "Análisis y Desarrollo de Sistemas",
   "school": "Centro Universitário União das Américas Descomplica",
-  "roles": [
-    "Cofundador y CTO",
-    "Ingeniero de Software",
-    "Ingeniero de Software",
-    "Profesor de Front-end",
-    "Ingeniero de Software",
-    "Desarrollador Front-end",
-    "Desarrollador Front-end Semisénior",
-    "Líder de Front-end",
-    "Desarrollador Front-end / Asistente de TI",
-    "Desarrollador Front-end"
-  ],
-  "experienceCopy": [
-    "Del MVP a una plataforma con más de 150 mil descargas. Web, mobile, suscripciones e IA.",
-    "Ecosistema de trade-in: evaluación, precios y diagnóstico automatizado de dispositivos.",
-    "Interfaces para operaciones de entrega, con accesibilidad, pruebas y fiabilidad.",
-    "Enseñanza de fundamentos de front-end, herramientas modernas, pruebas y accesibilidad.",
-    "Experiencias web para descubrir servicios y productos de viaje.",
-    "Aplicaciones para contratar y gestionar servicios de seguridad, con APIs y pruebas.",
-    "Gestión de ventas y anuncios integrada con los principales marketplaces.",
-    "Liderazgo del equipo de front-end, prácticas ágiles y prototipos de UI/UX.",
-    "Sistemas de gestión de ventas, integración de APIs, prototipos y soporte a clientes.",
-    "Aplicación web para distribuir noticias de educación a las escuelas brasileñas."
-  ],
   "contactLabel": "¿TIENES UNA IDEA? HABLEMOS.",
   "contactTitle": [
     "VAMOS A CREAR",
@@ -140,14 +121,6 @@
   "heroMotto": "VISIÓN FULL STACK. CUIDADO DEL FRONT-END.",
   "signatureMotto": "INGENIERÍA CON INTENCIÓN.",
   "footerSpecialties": "FULL STACK / FRONT-END / MOBILE",
-  "projectNames": [
-    "EMANU",
-    "DOJI TRADE-IN",
-    "DIAGNÓSTICO DE DISPOSITIVOS",
-    "INTELIGENCIA DE ENTREGAS",
-    "EXPERIENCIA DE VIAJE",
-    "OPERACIONES DE E-COMMERCE"
-  ],
   "projectKinds": {
     "web": "Web",
     "mobile": "Mobile",
@@ -186,75 +159,126 @@
     "condition": "CONDICIÓN",
     "verified": "Verificado"
   },
-  "stackItems": [
-    [
-      "TypeScript",
-      "JavaScript (ES6+)",
-      "SQL",
-      "Python (básico)"
-    ],
-    [
-      "React",
-      "Next.js",
-      "React Native",
-      "Angular",
-      "Vue.js",
-      "HTML & CSS",
-      "SASS / SCSS",
-      "Tailwind CSS",
-      "Styled Components"
-    ],
-    [
-      "Node.js",
-      "APIs REST",
-      "Git"
-    ],
-    [
-      "Jest",
-      "Testing Library",
-      "Cypress",
-      "MSW",
-      "Karma / Jasmine",
-      "Figma",
-      "Scrum / Kanban"
-    ]
-  ],
-  "projectTags": [
-    [
-      "Next.js",
-      "React Native",
-      "Node.js",
-      "IA"
-    ],
-    [
-      "Next.js",
-      "TypeScript",
-      "React"
-    ],
-    [
-      "React Native",
-      "TypeScript",
-      "Mobile"
-    ],
-    [
-      "React",
-      "TypeScript",
-      "Cypress"
-    ],
-    [
-      "Next.js",
-      "Tailwind CSS",
-      "TypeScript"
-    ],
-    [
-      "Angular",
-      "Vue.js",
-      "Syncfusion"
-    ]
-  ],
   "contactLinks": {
     "whatsapp": "WhatsApp",
     "linkedin": "LinkedIn",
     "github": "GitHub"
+  },
+  "projects": {
+    "emanu": {
+      "name": "EMANU",
+      "title": "De una idea a más de 150 mil descargas.",
+      "description": "Plataforma de fe y crecimiento espiritual con experiencias personalizadas, suscripciones e IA.",
+      "detail": "Como cofundador y CTO, desarrollé la plataforma web y la aplicación mobile con React, Next.js, React Native y Node.js. Diseñé y lancé el flujo de suscripción premium e integré funciones de IA para acompañar a los usuarios en su crecimiento espiritual.",
+      "tags": [
+        "Next.js",
+        "React Native",
+        "Node.js",
+        "IA"
+      ]
+    },
+    "doji": {
+      "name": "DOJI TRADE-IN",
+      "title": "Complejidad por dentro. Sencillez en pantalla.",
+      "description": "Evaluación de dispositivos con reglas de condición y precios en tiempo real.",
+      "detail": "Desarrollé el sistema de Grading en Next.js para el ecosistema de trade-in de Doji. La interfaz convierte reglas complejas de evaluación en un flujo claro, conectado a los precios en tiempo real y al ciclo de reventa de los dispositivos.",
+      "tags": [
+        "Next.js",
+        "TypeScript",
+        "React"
+      ]
+    },
+    "device": {
+      "name": "DIAGNÓSTICO DE DISPOSITIVOS",
+      "title": "Fiabilidad en la palma de la mano.",
+      "description": "Una aplicación que ejecuta pruebas funcionales automatizadas para verificar dispositivos.",
+      "detail": "Desarrollé una aplicación en React Native para ejecutar pruebas funcionales automatizadas en dispositivos móviles. Integré los flujos web y mobile para mantener los datos consistentes y apoyar la logística inversa del proceso de trade-in.",
+      "tags": [
+        "React Native",
+        "TypeScript",
+        "Mobile"
+      ]
+    },
+    "ifood": {
+      "name": "INTELIGENCIA DE ENTREGAS",
+      "title": "Mejores decisiones. Entregas inteligentes.",
+      "description": "Una aplicación para asignar repartidores, calcular distancias y estimar entregas.",
+      "detail": "En iFood, desarrollé una aplicación con React y TypeScript para calcular parámetros de entrega: selección del repartidor, distancia entre restaurante y cliente y tiempo estimado. Escribí pruebas con Jest, React Testing Library y Cypress y construí interfaces accesibles con SASS y Styled Components.",
+      "tags": [
+        "React",
+        "TypeScript",
+        "Cypress"
+      ]
+    },
+    "hurb": {
+      "name": "EXPERIENCIA DE VIAJE",
+      "title": "El viaje empieza en la experiencia.",
+      "description": "Páginas de servicios de viaje: seguros, cambio de divisas y conectividad.",
+      "detail": "En Hurb, desarrollé páginas en Next.js para presentar servicios de viaje y facilitar el descubrimiento de seguros, cambio de divisas y tarjetas SIM internacionales, utilizando TypeScript, Tailwind CSS y SASS.",
+      "tags": [
+        "Next.js",
+        "Tailwind CSS",
+        "TypeScript"
+      ]
+    },
+    "lexos": {
+      "name": "OPERACIONES DE E-COMMERCE",
+      "title": "Varios marketplaces. Una operación.",
+      "description": "Herramientas para gestionar ventas y anuncios en los principales marketplaces.",
+      "detail": "En Lexos, desarrollé funciones con Angular y Vue.js para gestionar ventas y anuncios en Mercado Livre, Shopee, AliExpress y Magalu. Integré APIs y escribí pruebas unitarias con Karma y Jasmine.",
+      "tags": [
+        "Angular",
+        "Vue.js",
+        "Syncfusion"
+      ]
+    }
+  },
+  "experience": {
+    "emanu": {
+      "role": "Cofundador y CTO",
+      "description": "Del MVP a una plataforma con más de 150 mil descargas. Web, mobile, suscripciones e IA."
+    },
+    "doji": {
+      "role": "Ingeniero de Software",
+      "description": "Ecosistema de trade-in: evaluación, precios y diagnóstico automatizado de dispositivos."
+    },
+    "ifood": {
+      "role": "Ingeniero de Software",
+      "description": "Interfaces para operaciones de entrega, con accesibilidad, pruebas y fiabilidad."
+    },
+    "gama": {
+      "role": "Profesor de Front-end",
+      "description": "Enseñanza de fundamentos de front-end, herramientas modernas, pruebas y accesibilidad."
+    },
+    "hurb": {
+      "role": "Ingeniero de Software",
+      "description": "Experiencias web para descubrir servicios y productos de viaje."
+    },
+    "wiz": {
+      "role": "Desarrollador Front-end",
+      "description": "Aplicaciones para contratar y gestionar servicios de seguridad, con APIs y pruebas."
+    },
+    "lexos": {
+      "role": "Desarrollador Front-end Semisénior",
+      "description": "Gestión de ventas y anuncios integrada con los principales marketplaces."
+    },
+    "smart-performance": {
+      "role": "Líder de Front-end",
+      "description": "Liderazgo del equipo de front-end, prácticas ágiles y prototipos de UI/UX."
+    },
+    "bilin": {
+      "role": "Desarrollador Front-end / Asistente de TI",
+      "description": "Sistemas de gestión de ventas, integración de APIs, prototipos y soporte a clientes."
+    },
+    "fnde": {
+      "role": "Desarrollador Front-end",
+      "description": "Aplicación web para distribuir noticias de educación a las escuelas brasileñas."
+    }
+  },
+  "projectFilters": {
+    "all": "Todos",
+    "web": "Web",
+    "mobile": "Mobile",
+    "fullstack": "Full stack"
   }
 }
